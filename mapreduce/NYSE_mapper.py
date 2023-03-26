@@ -10,12 +10,12 @@ import sys
 # input is read by STDIN (standard input) and do the following for each
 # input line
 
-with open('NYSE_DATA.txt', 'r') as fr:
+with open('mapreduce/NYSE_DATA.txt', 'r') as fr:
     lines = fr.readlines()
 
 # maplines = []
 
-with open('NYSE_DATA_MAP.txt', 'w') as fw:
+with open('mapreduce/NYSE_DATA_MAP.txt', 'w') as fw:
     for line in lines:
         # print(line)
 

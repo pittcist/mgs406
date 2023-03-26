@@ -1,6 +1,6 @@
 import sys
 
-with open('NYSE_DATA_SHUFFLE.txt', 'r') as fr:
+with open('mapreduce/NYSE_DATA_SHUFFLE.txt', 'r') as fr:
     lines = fr.readlines()
 
 # initialize the variables, lastKey with None and maxValue with 0
