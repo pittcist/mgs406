@@ -38,7 +38,7 @@ for line in lines:
 
 # # print lastKey and maxValue if lastKey is defined
 if lastKey:
-    print('%s\t%s' % (lastKey, maxValue))
+    print('{0} {1}'.format(lastKey, maxValue))
 
 
 

@@ -1,14 +1,4 @@
-#!/usr/bin/env python
-# this line means that the script is executable,
-# it calls the language interpreter to run the code inside the script
-# and is the guide to find 'python'
-
-
-# import the module for reading and writing data
 import sys
-
-# input is read by STDIN (standard input) and do the following for each
-# input line
 
 with open('mapreduce/NYSE_DATA.txt', 'r') as fr:
     lines = fr.readlines()
