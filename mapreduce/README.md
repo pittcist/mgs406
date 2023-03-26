@@ -1,3 +1,3 @@
-### MGS 406  
+### Week 8
 
-#Python code examples for MGS 406  
+# Example code for mapreduce
