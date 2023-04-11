@@ -1,9 +1,13 @@
 from flask import Flask, url_for, redirect, render_template, request
 from flask_bootstrap import Bootstrap
 
-import sqlite3 as sql
-app = Flask(__name__)
-Bootstrap(app)
+from flaskext.mysql import MySQL
+mysql = MySQL()
+mysql.init_app(app)
+
+# import sqlite3 as sql
+# app = Flask(__name__)
+# Bootstrap(app)
 
 @app.route('/')
 def home():
@@ -23,7 +27,7 @@ def addrec():
          city = request.form['city']
          zip = request.form['zip']
          
-         with sql.connect("database.db") as con:
+         with sql.connect("db_test.db") as con:
             cur = con.cursor()
             cmd = "INSERT INTO students (name,addr,city,zip) VALUES ('{0}','{1}','{2}','{3}')".format(nm,addr,city,zip)
             cur.execute(cmd)
@@ -40,7 +44,7 @@ def addrec():
 
 @app.route('/list')
 def list():
-   con = sql.connect("database.db")
+   con = sql.connect("db_test.db")
    con.row_factory = sql.Row
    
    cur = con.cursor()
